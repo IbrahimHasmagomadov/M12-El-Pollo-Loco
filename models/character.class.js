@@ -31,6 +31,7 @@ class Character extends MovableObject {
             this.x -= this.speed + 5;
             this.otherDirection = true;
         }
+        this.world.camera_x = -this.x;
       }, 1000 / 60);
 
 
@@ -41,7 +42,7 @@ class Character extends MovableObject {
         this.img = this.imageCache[path];
         this.currentImage++;
       }
-    }, 100);
+    }, 80);
   }
 
   jump() {}
